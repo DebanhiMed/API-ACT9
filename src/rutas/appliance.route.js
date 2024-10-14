@@ -13,7 +13,7 @@ router.get("/", async (req, res) => {
 router.get('/user/:id', async (req, res) => {
     const { id } = req.params;
 
-    const appliances = await prisma.appliance.findMany({
+    const appliances = await prisma.appliances.findMany({
         where: {
             userid: parseInt(id),
         },
