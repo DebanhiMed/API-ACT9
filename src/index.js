@@ -1,5 +1,6 @@
 import express from 'express';
 import userRoutes from './rutas/user.routes.js';
+import applianceRoutes from './rutas/appliance.routes.js';
 
 const app = express();
 
