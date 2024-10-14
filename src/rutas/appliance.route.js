@@ -5,9 +5,21 @@ const router = Router();
 const prisma = new PrismaClient();
 
 router.get("/", async (req, res) => {
-    const users = await prisma.appliances.findMany();
+    const appliances = await prisma.appliances.findMany();
     
-    res.json(users);
+    res.json(appliances);
+});
+
+router.get('/user/:id', async (req, res) => {
+    const { id } = req.params;
+
+    const appliances = await prisma.appliance.findMany({
+        where: {
+            userid: parseInt(id),
+        },
+    });
+
+    res.json(appliances);
 });
 
 router.get("/:id", async (req, res) => {
