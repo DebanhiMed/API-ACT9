@@ -12,7 +12,7 @@
   "description": "",
   "devDependencies": {
     "nodemon": "^3.1.7",
-    "prisma": "^5.20.0"
+    "prisma": "^5.23.0-dev.15"
   },
   "dependencies": {
     "@prisma/client": "^5.20.0",
